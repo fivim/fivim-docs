@@ -1,6 +1,6 @@
 # enassi-docs
 
-Document for enassi.
+Document for [enassi](https://github.com/enassi/enassi).
 
 ## Installion
 
