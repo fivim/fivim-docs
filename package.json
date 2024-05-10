@@ -2,6 +2,7 @@
   "name": "enassi_docs",
   "type": "module",
   "version": "1.0.0",
+  "packageManager": "pnpm",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
