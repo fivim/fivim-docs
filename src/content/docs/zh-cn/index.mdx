@@ -1,0 +1,24 @@
+---
+title: 欢迎来到 ENASSI
+description: 您的数据保密助理.
+template: splash
+hero:
+  tagline: 您的数据保密助理
+  image:
+    file: ../../../../public/logo.png
+  actions:
+    - text: 开始使用
+      link: /zh-cn/getting_started
+      icon: right-arrow
+      variant: primary
+---
+
+import { LinkCard, CardGrid } from "@astrojs/starlight/components";
+
+<CardGrid>
+  <LinkCard title="新手入门" href="/zh-cn/getting_started" />
+  <LinkCard title="主题" href="/zh-cn/themes" />
+  <LinkCard title="同步" href="/zh-cn/sync" />
+  <LinkCard title="常见问题" href="/zh-cn/faq" />
+  <LinkCard title="开发" href="/zh-cn/develop" />
+</CardGrid>

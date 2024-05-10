@@ -1,0 +1,24 @@
+---
+title: Welcome to ENASSI
+description: An assistant which can encrypt your data.
+template: splash
+hero:
+  tagline: Protect your data!
+  image:
+    file: ../../../../public/logo.png
+  actions:
+    - text: Get started
+      link: /en/getting_started
+      icon: right-arrow
+      variant: primary
+---
+
+import { LinkCard, CardGrid } from "@astrojs/starlight/components";
+
+<CardGrid>
+  <LinkCard title="Getting started" href="/en/getting_started" />
+  <LinkCard title="Themes" href="/en/themes" />
+  <LinkCard title="Sync" href="/en/sync" />
+  <LinkCard title="FAQ" href="/en/faq" />
+  <LinkCard title="Develop" href="/zh-cn/develop" />
+</CardGrid>
