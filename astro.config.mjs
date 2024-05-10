@@ -1,10 +1,6 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
-
-export const locales = {
-  root: { label: "English", lang: "en" },
-  "zh-cn": { label: "简体中文", lang: "zh-CN" },
-};
+import starlightLinksValidator from "starlight-links-validator";
 
 // https://astro.build/config
 export default defineConfig({
@@ -17,32 +13,18 @@ export default defineConfig({
         replacesTitle: true,
       },
       editLink: {
-        baseUrl: "https://github.com/withastro/starlight/edit/main/docs/",
+        baseUrl:
+          "https://github.com/enassi/enassi-docs/tree/main/",
       },
       social: {
         github: "https://github.com/enassi/enassi",
       },
-      // head: [
-      //   {
-      //     tag: "script",
-      //     attrs: {
-      //       src: "https://cdn.usefathom.com/script.js",
-      //       "data-site": "EZBHTSIG",
-      //       defer: true,
-      //     },
-      //   },
-      //   {
-      //     tag: "meta",
-      //     attrs: { property: "og:image", content: site + "og.jpg?v=1" },
-      //   },
-      //   {
-      //     tag: "meta",
-      //     attrs: { property: "twitter:image", content: site + "og.jpg?v=1" },
-      //   },
-      // ],
       customCss: process.env.NO_GRADIENTS ? [] : ["./src/styles/custom.css"],
-
-      locales,
+      locales: {
+        en: { label: "English", lang: "en" },
+        "zh-cn": { label: "简体中文", lang: "zh-CN" },
+      },
+      defaultLocale: "en",
       sidebar: [
         {
           label: "Start Here",
@@ -55,13 +37,6 @@ export default defineConfig({
               link: "getting-started",
               translations: {
                 "zh-CN": "开始使用",
-              },
-            },
-            {
-              label: "Sync",
-              link: "sync",
-              translations: {
-                "zh-CN": "同步",
               },
             },
             {
@@ -90,6 +65,14 @@ export default defineConfig({
           autogenerate: { directory: "FAQ" },
         },
       ],
+      plugins: process.env.CHECK_LINKS
+        ? [
+            starlightLinksValidator({
+              errorOnFallbackPages: false,
+              errorOnInconsistentLocale: true,
+            }),
+          ]
+        : [],
     }),
   ],
 });
