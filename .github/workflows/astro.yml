@@ -20,6 +20,13 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
+      # Add pnpm support.
+      # Refer: https://github.com/actions/setup-node/blob/main/docs/advanced-usage.md#caching-packages-dependencies
+      # Ensure that pnpm-lock.yaml is always committed, when on CI pass --frozen-lockfile to pnpm install when installing packages.
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2 
+        with:
+          version: 8
       - name: Install, build, and upload your site
         uses: withastro/action@v2
         # with:
