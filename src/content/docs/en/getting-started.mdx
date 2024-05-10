@@ -3,12 +3,62 @@ title: Getting started
 description: ""
 ---
 
-## Configure files
+## Setup wizard
 
-The main configure file is in your home directory .enassi/conf.bin, its content has been encrypted.
+- Choose a theme
+- Set password, which will be used for file encryption (including configuration files and user requested encrypted files) and unlocking login interface
+- Set the extension of the encrypted file, defaults **.enc**.
 
-    on Windows is: C:\Users\YOUR_USER_NAME\.enassi\conf.bin
-    on Linux is: ~/.enassi/conf.bin
-    on MacOS is: ~/.enassi/conf.bin
+## File types
 
-The startup configuration and main configuration file are in the same directory, with the file name conf.startup.bin.
+Supports Markdown files (.md), Rich Text files (.xrtm), PDFs, images, etc.
+
+### Rich Text files
+
+We use '.xrtm' as the extension for rich text files, which is essentially HTML code with strong universality and facilitates data migration
+
+#### Hot key
+
+The shortcut keys we support are as follows:
+
+- Heading 1:**#**
+- Heading 2:**##**
+- Heading 3:**###**
+- Heading 4:**####**
+- Heading 5:**#####**
+- Heading 6:**######**
+- Italic:**\***
+- Bold:**\*\***
+- Line:**\*\*\***
+- Image:**\\[[**
+- Link:**\\[**
+- Ordered list: **1.**
+- Unordered list:**-**
+- Qoute:**>**
+- Table:**|||**
+- Code block:**```**
+
+Usage: Press the shortcut key in the new block, then press **shift + space** to trigger the shortcut function
+
+## Sync
+
+Currently supports **Gitee** and **Gitlab**. If synchronization is enabled, file changes will first modify remote files before modifying local files.
+
+The token needs to be obtained by the user on the Gitee and Gitlab pages:
+
+[gitee's token](https://gitee.com/profile/personal_access_tokens/new) At least check the Permission **projects**.
+
+[gitlab's token](https://gitlab.com/-/user_settings/personal_access_tokens) At least check the Scopes **api, read_api, read_repository, write_repository**.
+
+## Configuration file
+
+Enassi has two configuration files located in the **enassi** directory in your document directory:
+
+- **conf/conf. bin** is the main configuration file, and its content will be encrypted.
+- **conf/conf. startup. json** is the configuration file for launching the app, and its content is json
+
+The specific path for **conf/conf.bin** is:
+
+- Windows: `C:\Users\YOUR_USER_NAME\Documents\enassi\conf.bin`
+- Linux: `~/Documents/enassi/conf/conf.bin`
+- MacOS: `~/Documents/enassi/conf/conf.bin`

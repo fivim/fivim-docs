@@ -5,10 +5,10 @@ description: ""
 
 ## Best usage
 
-Set a strong password.
+### Set a strong password.
 
-Keep your encrypted files together, so you can easily find them. This is very important when you want to change the password.
-You can create a directiry, make a file as the index file, create other files use some simple chars as the filename. For example:
+Hide real file names
+An encrypted file with a special name can be used as the index file, so that others cannot know the actual file name of the encrypted file. For example:
 
 ```
 ├── secret_directory
@@ -39,7 +39,7 @@ So, if you want to change your password, you can follow the steps:
 1. Export all of your encypted files.
 2. Delete your app data, both configure files and user data.
 3. Reopen your app, set a new password in the **setup wizard** page.
-4. Copy your file contents into the new files.
+4. Create a new file with an encrypted file extension (defaults **.enc**), copy the file content to the new file, and save it.
 
 ## I can't edit file when sync service is not available.
 
@@ -47,9 +47,7 @@ Because to make a perfect sync service is not easy. so if you have set a sync se
 
 ## Can I work with git?
 
-If you want to use **git** on desktop OS, it's better to usset the sync service, because **Initialize from remote end** will remove the **workDir**, this will lost **.git** directory.
-
-For mobile OS, you cannot use **git**, set a sync service is necessary.
+If you want to use **git** or other version control tools for synchronization, you need to disable enassi synchronization because initialization from remote will delete the **~/enassi/user-files** directory, which will cause errors by deleting the **.git** directory.
 
 ## Translation error found
 
