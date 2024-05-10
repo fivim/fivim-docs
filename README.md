@@ -9,6 +9,8 @@ pnpm i
 pnpm dev
 ```
 
+[astro requires "sharp"](https://docs.astro.build/en/reference/errors/could-not-transform-image/)
+
 ### Develop
 
 ```sh
