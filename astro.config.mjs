@@ -14,7 +14,7 @@ export default defineConfig({
       },
       editLink: {
         baseUrl:
-          "https://github.com/enassi/enassi-docs/tree/main/src/content/docs/",
+          "https://github.com/enassi/enassi-docs/tree/main/",
       },
       social: {
         github: "https://github.com/enassi/enassi",

@@ -136,27 +136,27 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"docs": {
-"en/FAQ/faq.md": {
-	id: "en/FAQ/faq.md";
+"en/FAQ/faq.mdx": {
+	id: "en/FAQ/faq.mdx";
   slug: "en/faq/faq";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"en/develop/encrypt.md": {
-	id: "en/develop/encrypt.md";
+} & { render(): Render[".mdx"] };
+"en/develop/encrypt.mdx": {
+	id: "en/develop/encrypt.mdx";
   slug: "en/develop/encrypt";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"en/getting-started.md": {
-	id: "en/getting-started.md";
+} & { render(): Render[".mdx"] };
+"en/getting-started.mdx": {
+	id: "en/getting-started.mdx";
   slug: "en/getting-started";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
+} & { render(): Render[".mdx"] };
 "en/index.mdx": {
 	id: "en/index.mdx";
   slug: "en";
@@ -164,13 +164,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"en/themes.md": {
-	id: "en/themes.md";
+"en/themes.mdx": {
+	id: "en/themes.mdx";
   slug: "en/themes";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
+} & { render(): Render[".mdx"] };
 "index.mdx": {
 	id: "index.mdx";
   slug: "index";
@@ -178,27 +178,27 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"zh-cn/FAQ/faq.md": {
-	id: "zh-cn/FAQ/faq.md";
+"zh-cn/FAQ/faq.mdx": {
+	id: "zh-cn/FAQ/faq.mdx";
   slug: "zh-cn/faq/faq";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"zh-cn/develop/encrypt.md": {
-	id: "zh-cn/develop/encrypt.md";
+} & { render(): Render[".mdx"] };
+"zh-cn/develop/encrypt.mdx": {
+	id: "zh-cn/develop/encrypt.mdx";
   slug: "zh-cn/develop/encrypt";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"zh-cn/getting-started.md": {
-	id: "zh-cn/getting-started.md";
+} & { render(): Render[".mdx"] };
+"zh-cn/getting-started.mdx": {
+	id: "zh-cn/getting-started.mdx";
   slug: "zh-cn/getting-started";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
+} & { render(): Render[".mdx"] };
 "zh-cn/index.mdx": {
 	id: "zh-cn/index.mdx";
   slug: "zh-cn";
@@ -206,13 +206,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"zh-cn/themes.md": {
-	id: "zh-cn/themes.md";
+"zh-cn/themes.mdx": {
+	id: "zh-cn/themes.mdx";
   slug: "zh-cn/themes";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
+} & { render(): Render[".mdx"] };
 };
 
 	};
