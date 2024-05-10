@@ -22,17 +22,17 @@ jobs:
         uses: actions/checkout@v4
         
       # Add pnpm support.
-      # - name: Install pnpm
-      #   uses: pnpm/action-setup@v3
-      #   with:
-      #     version: 9
-      # - name: Sync node version and setup cache
-      #   uses: actions/setup-node@v4
-      #   with:
-      #     node-version: 'lts/*'
-      #     cache: 'pnpm'
-      # - name: Install frontend dependencies
-      #   run: pnpm install
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9
+      - name: Sync node version and setup cache
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+          cache: 'pnpm'
+      - name: Install frontend dependencies
+        run: pnpm install
           
       - name: Install, build, and upload your site
         uses: withastro/action@v2
