@@ -143,9 +143,9 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
-"en/develop/develop.md": {
-	id: "en/develop/develop.md";
-  slug: "en/develop/develop";
+"en/develop/encrypt.md": {
+	id: "en/develop/encrypt.md";
+  slug: "en/develop/encrypt";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
@@ -164,13 +164,6 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"en/sync.md": {
-	id: "en/sync.md";
-  slug: "en/sync";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
 "en/themes.md": {
 	id: "en/themes.md";
   slug: "en/themes";
@@ -192,9 +185,9 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
-"zh-cn/develop/develop.md": {
-	id: "zh-cn/develop/develop.md";
-  slug: "zh-cn/develop/develop";
+"zh-cn/develop/encrypt.md": {
+	id: "zh-cn/develop/encrypt.md";
+  slug: "zh-cn/develop/encrypt";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
@@ -213,13 +206,6 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"zh-cn/sync.md": {
-	id: "zh-cn/sync.md";
-  slug: "zh-cn/sync";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
 "zh-cn/themes.md": {
 	id: "zh-cn/themes.md";
   slug: "zh-cn/themes";
