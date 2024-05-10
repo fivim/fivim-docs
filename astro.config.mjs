@@ -4,6 +4,7 @@ import starlightLinksValidator from "starlight-links-validator";
 
 // https://astro.build/config
 export default defineConfig({
+  // https://docs.astro.build/en/guides/deploy/github/
   site: "https://enassi.github.io",
   base: "/enassi-docs",
   integrations: [
