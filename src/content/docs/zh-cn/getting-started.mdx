@@ -11,7 +11,19 @@ description: ""
 
 - 设置加密后的文件的扩展名, 默认使用 **.enc**
 
-
 ## 同步
 
 目前支持 gitee 和 gitlab. 如果启用了同步, 文件的更改将会先修改远端文件, 然后才会修改本地文件.
+
+## 配置文件
+
+enassi 有两个配置文件,位于您的文档目录里的 **.enassi** 目录:
+
+- **conf/conf.bin** 是主配置文件, 其内容将会被加密
+- **conf/conf.startup.bin** 是启动 app 的配置文件.
+
+**conf/conf.bin** 的具体路径为:
+
+- Windows: `C:\Users\YOUR_USER_NAME\Documents\enassi\conf.bin`
+- Linux: `~/Documents/enassi/conf/conf.bin`
+- MacOS: `~/Documents/enassi/conf/conf.bin`
