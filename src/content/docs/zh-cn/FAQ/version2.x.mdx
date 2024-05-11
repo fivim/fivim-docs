@@ -7,17 +7,28 @@ description: ""
 
 几乎进行了重写, 主要包括:
 
-- 富文本编辑器改用 [Jodit](https://github.com/xdan/jodit)
+- 富文本编辑器改用 [Jodit](https://xdsoft.net/jodit/)
 - vue 改用 react
 - vite 改用 rspack(为了打包后 Jodit 不报错)
+
+### 关于富文本编辑器
+
+我们尝试过以下编辑器:
+
+- [Jodit](https://xdsoft.net/jodit/) / [repo](https://github.com/xdan/jodit)
+- [lexical](https://lexical.dev/) / [repo](https://github.com/facebook/lexical)
+- [mdx editor](https://mdxeditor.dev/) / [repo](https://github.com/mdx-editor/editor)
+- [quill](https://quilljs.com/) / [repo](https://github.com/quilljs/quill)
+
+最终我们决定使用 [Jodit](https://xdsoft.net/jodit/)，因为它的功能丰富，容易扩展，可保存为 HTML(通用性强，数据量更小)。
 
 ## 2.x 版本的功能
 
 功能有所调整:
 
-- 去掉了文件保险箱， 可以使用 **导入文件并加密** 实现一样的功能。
+- 去掉了文件保险箱，可以使用 **导入文件并加密** 实现一样的功能。
 - 暂时去掉了分享给朋友
 
 ## 从 1.x 版本迁移
 
-由于差异过大， 需要逐个复制 1.x 版本里的每个文件到 2.x 版本。
+由于差异过大，需要逐个复制 1.x 版本里的每个文件到 2.x 版本。
