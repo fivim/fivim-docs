@@ -45,6 +45,10 @@ So, if you want to change your password, you can follow the steps:
 
 Because to make a perfect sync service is not easy. so if you have set a sync service, all the changes will be sent to the remote server first, and the local file changes after the sync service returns success. This will ensure the files are correct.
 
+## Why not use git synchronization?
+
+If there is a file content conflict, it is more difficult for ordinary users to solve, in order to make it easier for ordinary users to use.
+
 ## Can I work with git?
 
 If you want to use **git** or other version control tools for synchronization, you need to disable enassi synchronization because initialization from remote will delete the **~/enassi/user-files** directory, which will cause errors by deleting the **.git** directory.
