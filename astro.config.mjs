@@ -48,6 +48,13 @@ export default defineConfig({
                 "zh-CN": "主题",
               },
             },
+            {
+              label: "Donate",
+              link: "donate",
+              translations: {
+                "zh-CN": "捐赠",
+              },
+            },
           ],
         },
         {

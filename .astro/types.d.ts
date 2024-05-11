@@ -157,6 +157,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
+"en/donate.mdx": {
+	id: "en/donate.mdx";
+  slug: "en/donate";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
 "en/getting-started.mdx": {
 	id: "en/getting-started.mdx";
   slug: "en/getting-started";
@@ -202,6 +209,13 @@ declare module 'astro:content' {
 "zh-cn/develop/encrypt.mdx": {
 	id: "zh-cn/develop/encrypt.mdx";
   slug: "zh-cn/develop/encrypt";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"zh-cn/donate.mdx": {
+	id: "zh-cn/donate.mdx";
+  slug: "zh-cn/donate";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
