@@ -37,6 +37,7 @@ description: ""
 
 ```typescript
 export type CustomBlockComponentRef = {
+  initBlock: () => void;
   genBlockRenderData: (
     dataset: BlockEleDataSet,
     dataJsonStr: string
@@ -46,6 +47,7 @@ export type CustomBlockComponentRef = {
 };
 ```
 
+- `initBlock` 用于初始化。
 - `genBlockRenderData` 用于生成渲染数据。
 - `setDialogOpen` 用于设置插件的对话框状态。
 - `clickHandler` 用于处理点击事件。

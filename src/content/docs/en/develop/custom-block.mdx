@@ -37,6 +37,7 @@ The components of custom blocks need to provide several methods according to the
 
 ```typescript
 export type CustomBlockComponentRef = {
+  initBlock: () => void;
   genBlockRenderData: (
     dataset: BlockEleDataSet,
     dataJsonStr: string
@@ -46,6 +47,7 @@ export type CustomBlockComponentRef = {
 };
 ```
 
+- `initBlock` Used for initialization.
 - `genBlockRenderData` Used to generate rendering data.
 - `setDialogOpen` Used to set the dialog box status for plugins.
 - `clickHandler` Used to handle click events.
