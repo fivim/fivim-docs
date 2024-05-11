@@ -1,0 +1,63 @@
+---
+title: 构建
+description: ""
+---
+
+### 安装依赖
+
+[Tauri 的依赖](https://tauri.app/v1/guides/getting-started/prerequisites)
+
+[安装 pnpm](https://pnpm.io/installation)
+
+```bash
+pnpm i
+```
+
+#### Fedora
+
+如果您正在使用 **fedora**, 可能需要安装 perl:
+
+```bash
+sudo dnf install perl
+```
+
+### 更新依赖
+
+更新 **npm** 依赖:
+
+```bash
+pnpm update
+```
+
+更新 **cargo** 依赖:
+
+```bash
+cd src-tauri
+cargo update
+```
+
+### 启动 Tauri 开发窗口
+
+```bash
+pnpm tauri dev
+# pnpm tauri dev # 不要使用这个命令，因为 enassi不能在浏览器中工作
+```
+
+### 构建
+
+```bash
+pnpm tauri build
+```
+
+#### 在 linux 上构建 `.appimage`
+
+```bash
+pnpm tauri build -b appimage
+```
+
+如果您得到错误 `/usr/bin/strip: Unable to recognise the format of the input file /usr/lib/libSvtAv1Enc.so.1' `:
+
+```bash
+cd ./src-tauri/target/x86_64-unknown-linux-gnu/release/bundle/appimage
+NO_STRIP=true ./build_appimage.sh
+```
