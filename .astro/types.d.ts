@@ -150,6 +150,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
+"en/develop/custom-block.mdx": {
+	id: "en/develop/custom-block.mdx";
+  slug: "en/develop/custom-block";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
 "en/develop/encrypt.mdx": {
 	id: "en/develop/encrypt.mdx";
   slug: "en/develop/encrypt";
@@ -202,6 +209,13 @@ declare module 'astro:content' {
 "zh-cn/FAQ/version2.x.mdx": {
 	id: "zh-cn/FAQ/version2.x.mdx";
   slug: "zh-cn/faq/version2x";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"zh-cn/develop/custom-block.mdx": {
+	id: "zh-cn/develop/custom-block.mdx";
+  slug: "zh-cn/develop/custom-block";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">

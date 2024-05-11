@@ -1,0 +1,57 @@
+---
+title: Custom block
+description: ""
+---
+
+## Basic structure and parameters
+
+The data structure of a custom block is similar to:
+
+```html
+<div
+  class="custom-block"
+  data-type="code-block"
+  data-uuid="4dffc94a-3ace-408b-8b49-69d9b73989ef"
+  data-lang="rust"
+  contenteditable="false"
+>
+  <code class="dataJson">
+    {"content":"let aaa=123;\n\n//111\n//222\n// 333\n\nlet bbb=456;"}
+  </code>
+</div>
+```
+
+Parameter Description:
+
+- `div.custom-block`: Indicates this is a custom block.
+- `data-type="code-block"`: The type of this block is "code block".
+- `data-uuid="4dffc94a-3ace-408b-8b49-69d9b73989ef"`: Indicates the identity of the block.
+- `data-lang="rust"`: Indicates the language of this block.
+- `code.dataJson`: The raw data of the block is stored using JSON, and the data type can be defined by yourself.
+
+## Implement plugins
+
+For specific implementation methods, please refer to the code of `code-block`.
+
+The components of custom blocks need to provide several methods according to the definition of `CustomiBlockComponentRef`:
+
+```typescript
+export type CustomBlockComponentRef = {
+  genBlockRenderData: (
+    dataset: BlockEleDataSet,
+    dataJsonStr: string
+  ) => BlockElePreviewData;
+  setDialogOpen: (status: boolean) => void;
+  clickHandler: (target: HTMLDivElement, clostCbEle: Element) => void;
+};
+```
+
+- `genBlockRenderData` Used to generate rendering data.
+- `setDialogOpen` Used to set the dialog box status for plugins.
+- `clickHandler` Used to handle click events.
+
+## Rendering and click events
+
+In `renderCustomBlock`, all custom blocks will be traversed, and the rendered data will be obtained by calling their respective `genBlockRenderData` method based on different types. Afterwards, a `.review` will be inserted within the `.custom-block` to display the rendered results.
+
+In `handleClick`, the click event is sent to the respective `clickHandler` method for processing according to the different types.
