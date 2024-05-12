@@ -1,0 +1,63 @@
+---
+title: Build
+description: ""
+---
+
+### Install packages
+
+[Tauri prerequisites](https://tauri.app/v1/guides/getting-started/prerequisites)
+
+[Install pnpm](https://pnpm.io/installation)
+
+```bash
+pnpm i
+```
+
+#### Fedora
+
+If you are using **fedora**, you might need to install perl:
+
+```bash
+sudo dnf install perl
+```
+
+### Update packages
+
+Update **npm** packages:
+
+```bash
+pnpm update
+```
+
+Update **cargo** packages:
+
+```bash
+cd src-tauri
+cargo update
+```
+
+### Start Tauri Development Window
+
+```bash
+pnpm tauri dev
+# pnpm tauri dev # Do not use, because enassi cannot work in browser
+```
+
+### Build
+
+```bash
+pnpm tauri build
+```
+
+#### Build an `.appimage` on linux
+
+```bash
+pnpm tauri build -b appimage
+```
+
+If you get an error like `/usr/bin/strip: Unable to recognise the format of the input file /usr/lib/libSvtAv1Enc.so.1' `:
+
+```bash
+cd ./src-tauri/target/x86_64-unknown-linux-gnu/release/bundle/appimage
+NO_STRIP=true ./build_appimage.sh
+```

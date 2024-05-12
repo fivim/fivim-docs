@@ -1,0 +1,59 @@
+---
+title: 自定义区块
+description: ""
+---
+
+## 基本结构和参数
+
+一个自定义区块的数据结构类似:
+
+```html
+<div
+  class="custom-block"
+  data-type="code-block"
+  data-uuid="4dffc94a-3ace-408b-8b49-69d9b73989ef"
+  data-lang="rust"
+  contenteditable="false"
+>
+  <code class="dataJson">
+    {"content":"let aaa=123;\n\n//111\n//222\n// 333\n\nlet bbb=456;"}
+  </code>
+</div>
+```
+
+参数说明：
+
+- `div.custom-block`: 表示这是一个自定义区块。
+- `data-type="code-block"`: 表示区块的类型为 “code-block”。
+- `data-uuid="4dffc94a-3ace-408b-8b49-69d9b73989ef"`: 表示区块的身份。
+- `data-lang="rust"`: 表示区块的语言。
+- `code.dataJson`: 区块的原始数据， 使用 json 存储，数据类型可以自己定义。
+
+## 实现插件
+
+具体实现方式请参考 `code-block` 的代码。
+
+自定义区块的组件需要按 `CustomBlockComponentRef` 的定义提供几个方法：
+
+```typescript
+export type CustomBlockComponentRef = {
+  initBlock: () => void;
+  genBlockRenderData: (
+    dataset: BlockEleDataSet,
+    dataJsonStr: string
+  ) => BlockElePreviewData;
+  setDialogOpen: (status: boolean) => void;
+  clickHandler: (target: HTMLDivElement, clostCbEle: Element) => void;
+};
+```
+
+- `initBlock` 用于初始化。
+- `genBlockRenderData` 用于生成渲染数据。
+- `setDialogOpen` 用于设置插件的对话框状态。
+- `clickHandler` 用于处理点击事件。
+
+## 渲染和点击事件
+
+在 `renderCustomBlock` 中会遍历所有自定义区块，根据不同类型调用各自的 `genBlockRenderData` 方式获取渲染后的数据。之后会在 `.custom-block` 内插入一个 `.preview`， 用于显示渲染之后的结果。
+
+在 `handleClick` 会根据不同类型把点击事件发送到各自的 `clickHandler` 方法进行处理。
