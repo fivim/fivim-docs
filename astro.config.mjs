@@ -57,12 +57,22 @@ export default defineConfig({
             },
           ],
         },
+
         {
           label: "Develop guides",
           translations: {
             "zh-CN": "开发指南",
           },
           autogenerate: { directory: "develop" },
+        },
+
+
+        {
+          label: "Exsied(editor)",
+          translations: {
+            "zh-CN": "Exsied(编辑器)",
+          },
+          autogenerate: { directory: "exsied" },
         },
 
         {
