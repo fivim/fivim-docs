@@ -178,6 +178,20 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
+"en/exsied/about.mdx": {
+	id: "en/exsied/about.mdx";
+  slug: "en/exsied/about";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"en/exsied/i18n.mdx": {
+	id: "en/exsied/i18n.mdx";
+  slug: "en/exsied/i18n";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
 "en/getting-started.mdx": {
 	id: "en/getting-started.mdx";
   slug: "en/getting-started";
@@ -244,6 +258,20 @@ declare module 'astro:content' {
 "zh-cn/donate.mdx": {
 	id: "zh-cn/donate.mdx";
   slug: "zh-cn/donate";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"zh-cn/exsied/about.mdx": {
+	id: "zh-cn/exsied/about.mdx";
+  slug: "zh-cn/exsied/about";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"zh-cn/exsied/i18n.mdx": {
+	id: "zh-cn/exsied/i18n.mdx";
+  slug: "zh-cn/exsied/i18n";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">

@@ -1,0 +1,28 @@
+---
+title: I18N
+description: ""
+---
+
+## How to find all words?
+
+Search `t('` in your IDE.
+
+## How to custom my locale?
+
+### Setp1: use `EXSIED.setDict` set a dict.
+
+```js
+EXSIED.setDict("zh-CN", {
+  Title: "标题",
+  Alternative: "别名",
+  Styles: "样式",
+  Width: "宽度",
+  Height: "高度",
+});
+```
+
+### Setp2: use `EXSIED.setLocale` set a locale.
+
+```js
+EXSIED.setLocale("zh-CN");
+```

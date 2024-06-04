@@ -1,0 +1,28 @@
+---
+title: 国际化
+description: ""
+---
+
+## 如何找到所有单词?
+
+在您的 IDE 中搜索 `t('`.
+
+## 如何自定义 locale?
+
+### 第1步: 使用 `EXSIED.setDict` 设置字典.
+
+```js
+EXSIED.setDict("zh-CN", {
+  Title: "标题",
+  Alternative: "别名",
+  Styles: "样式",
+  Width: "宽度",
+  Height: "高度",
+});
+```
+
+### 第2步: use `EXSIED.setLocale` 设置 locale.
+
+```js
+EXSIED.setLocale("zh-CN");
+```
