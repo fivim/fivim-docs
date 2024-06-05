@@ -3,7 +3,7 @@ title: Build
 description: ""
 ---
 
-### Install packages
+## Install packages
 
 [Tauri prerequisites](https://tauri.app/v1/guides/getting-started/prerequisites)
 
@@ -13,7 +13,7 @@ description: ""
 pnpm i
 ```
 
-#### Fedora
+### Fedora
 
 If you are using **fedora**, you might need to install perl:
 
@@ -21,7 +21,7 @@ If you are using **fedora**, you might need to install perl:
 sudo dnf install perl
 ```
 
-### Update packages
+## Update packages
 
 Update **npm** packages:
 
@@ -36,20 +36,26 @@ cd src-tauri
 cargo update
 ```
 
-### Start Tauri Development Window
+## PDF worker
+
+Check **pdfjs.version** in `src/components/Editor/PdfViewer/index.tsx`, and download the worker,
+the download link like `https://cdn.jsdelivr.net/npm/pdfjs-dist@4.3.136/build/pdf.worker.min.mjs`,
+**4.3.136** should be replaced with your **pdfjs.version**.
+
+## Start Tauri Development Window
 
 ```bash
 pnpm tauri dev
 # pnpm tauri dev # Do not use, because enassi cannot work in browser
 ```
 
-### Build
+## Build
 
 ```bash
 pnpm tauri build
 ```
 
-#### Build an `.appimage` on linux
+### Build an `.appimage` on linux
 
 ```bash
 pnpm tauri build -b appimage
