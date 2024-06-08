@@ -2,19 +2,10 @@ import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import starlightLinksValidator from "starlight-links-validator";
 
-let site = "https://enassi.github.io";
-let base = "/enassi-docs";
-
-if (process.env.inCloudflare) {
-  site = "https://enassi.pages.dev";
-  base = "/";
-}
-
-// https://astro.build/config
-export default defineConfig({
+const conf = {
   // https://docs.astro.build/en/guides/deploy/github/
-  site: site, // "https://enassi.github.io",
-  base: base, // "/enassi-docs",
+  // site: "https://enassi.github.io",
+  // base: "/enassi-docs",
   integrations: [
     starlight({
       title: "Enassi Docs",
@@ -101,4 +92,27 @@ export default defineConfig({
         : [],
     }),
   ],
-});
+};
+
+export const siteAndBase = {
+  site: "",
+  base: "",
+};
+
+if (process.env.inCloudflare) {
+  // if (true) {
+  conf.site = "https://enassi.pages.dev";
+  siteAndBase.site = conf.site;
+} else {
+  conf.site = "https://enassi.github.io";
+  conf.base = "/enassi-docs";
+
+  siteAndBase.site = conf.site;
+  siteAndBase.base = conf.base;
+}
+
+process.stdout.write(`site:: ${conf.site || ""}\n`);
+process.stdout.write(`base:: ${conf.base || ""}\n`);
+
+// https://astro.build/config
+export default defineConfig(conf);
