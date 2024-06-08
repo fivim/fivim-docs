@@ -6,9 +6,14 @@ hero:
   tagline: Enassi is an editor that can encrypt user data, support markdown, rich text, source code files, pdf, images, etc.
   image:
     file: ../../../public/logo.png
-  actions:
-    - text: Getting started
-      link: /enassi-docs/en/getting-started
-      icon: right-arrow
-      variant: primary
 ---
+
+import { LinkCard, CardGrid } from "@astrojs/starlight/components";
+import { siteAndBase } from "../../site.config";
+
+<CardGrid>
+  <LinkCard title="English" href={siteAndBase.base + "/en"} />
+  <LinkCard title="简体中文" href={siteAndBase.base + "/zh-cn"} />
+</CardGrid>
+
+

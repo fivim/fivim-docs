@@ -192,6 +192,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
+"en/exsied/plugins.mdx": {
+	id: "en/exsied/plugins.mdx";
+  slug: "en/exsied/plugins";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
 "en/getting-started.mdx": {
 	id: "en/getting-started.mdx";
   slug: "en/getting-started";
@@ -272,6 +279,13 @@ declare module 'astro:content' {
 "zh-cn/exsied/i18n.mdx": {
 	id: "zh-cn/exsied/i18n.mdx";
   slug: "zh-cn/exsied/i18n";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"zh-cn/exsied/plugins.mdx": {
+	id: "zh-cn/exsied/plugins.mdx";
+  slug: "zh-cn/exsied/plugins";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">

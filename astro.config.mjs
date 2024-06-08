@@ -2,11 +2,12 @@ import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import starlightLinksValidator from "starlight-links-validator";
 
-// https://astro.build/config
-export default defineConfig({
+import { siteAndBase } from "./src/site.config";
+
+const conf = {
   // https://docs.astro.build/en/guides/deploy/github/
-  site: "https://enassi.github.io",
-  base: "/enassi-docs",
+  // site: "https://enassi.github.io",
+  // base: "/enassi-docs",
   integrations: [
     starlight({
       title: "Enassi Docs",
@@ -66,7 +67,6 @@ export default defineConfig({
           autogenerate: { directory: "develop" },
         },
 
-
         {
           label: "Exsied(editor)",
           translations: {
@@ -94,4 +94,13 @@ export default defineConfig({
         : [],
     }),
   ],
-});
+};
+
+if (siteAndBase.base) conf.base = siteAndBase.base;
+if (siteAndBase.site) conf.site = siteAndBase.site;
+
+process.stdout.write(`site:: ${conf.site || ""}\n`);
+process.stdout.write(`base:: ${conf.base || ""}\n`);
+
+// https://astro.build/config
+export default defineConfig(conf);
