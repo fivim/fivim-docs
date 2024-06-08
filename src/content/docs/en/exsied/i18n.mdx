@@ -3,16 +3,16 @@ title: I18N
 description: ""
 ---
 
-## How to find all words?
+Currently, **exsied** only supports English. Developers can add support for other locales by following these steps:
+
+### Setp1: serach all words
 
 Search `t('` in your IDE.
 
-## How to custom my locale?
-
-### Setp1: use `exsied.setDict` set a dict.
+### Setp2: use `exsied.i18n.setDict` set a dict.
 
 ```js
-exsied.setDict("zh-CN", {
+exsied.i18n.setDict("zh-CN", {
   Title: "标题",
   Alternative: "别名",
   Styles: "样式",
@@ -21,8 +21,8 @@ exsied.setDict("zh-CN", {
 });
 ```
 
-### Setp2: use `exsied.setLocale` set a locale.
+### Setp3: use `exsied.i18n.setLocale` set a locale.
 
 ```js
-exsied.setLocale("zh-CN");
+exsied.i18n.setLocale("zh-CN");
 ```

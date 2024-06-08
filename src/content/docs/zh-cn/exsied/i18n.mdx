@@ -3,16 +3,16 @@ title: 国际化
 description: ""
 ---
 
-## 如何找到所有单词?
+目前, **exsied** 只支持英语. 开发者可以根据一下步骤定制自己的语言:
 
-在您的 IDE 中搜索 `t('`.
+### 第 1 步: 找到所有单词
 
-## 如何自定义 locale?
+在IDE中搜索 `t('`
 
-### 第1步: 使用 `exsied.setDict` 设置字典.
+### 第 2 步: 使用 `exsied.i18n.setDict` 设置字典.
 
 ```js
-exsied.setDict("zh-CN", {
+exsied.i18n.setDict("zh-CN", {
   Title: "标题",
   Alternative: "别名",
   Styles: "样式",
@@ -21,8 +21,8 @@ exsied.setDict("zh-CN", {
 });
 ```
 
-### 第2步: use `exsied.setLocale` 设置 locale.
+### 第 2 步: 使用 `exsied.i18n.setLocale` 设置字典.
 
 ```js
-exsied.setLocale("zh-CN");
+exsied.i18n.setLocale("zh-CN");
 ```

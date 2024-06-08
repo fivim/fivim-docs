@@ -3,7 +3,7 @@ title: 构建
 description: ""
 ---
 
-### 安装依赖
+## 安装依赖
 
 [Tauri 的依赖](https://tauri.app/v1/guides/getting-started/prerequisites)
 
@@ -13,7 +13,7 @@ description: ""
 pnpm i
 ```
 
-#### Fedora
+### Fedora
 
 如果您正在使用 **fedora**, 可能需要安装 perl:
 
@@ -21,7 +21,7 @@ pnpm i
 sudo dnf install perl
 ```
 
-### 更新依赖
+## 更新依赖
 
 更新 **npm** 依赖:
 
@@ -36,20 +36,26 @@ cd src-tauri
 cargo update
 ```
 
-### 启动 Tauri 开发窗口
+## PDF worker
+
+检查 `src/components/Editor/PdfViewer/index.tsx` 中的 **pdfjs.version**, 下载 worker,
+下载链接类似 `https://cdn.jsdelivr.net/npm/pdfjs-dist@4.3.136/build/pdf.worker.min.mjs`,
+**4.3.136** 应该替换为 **pdfjs.version**.
+
+## 启动 Tauri 开发窗口
 
 ```bash
 pnpm tauri dev
 # pnpm tauri dev # 不要使用这个命令，因为 enassi不能在浏览器中工作
 ```
 
-### 构建
+## 构建
 
 ```bash
 pnpm tauri build
 ```
 
-#### 在 linux 上构建 `.appimage`
+### 在 linux 上构建 `.appimage`
 
 ```bash
 pnpm tauri build -b appimage
