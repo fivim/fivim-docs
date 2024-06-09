@@ -8,7 +8,9 @@ description: ""
 If you have customized any functions, you should add your own information to `about.conf.deveploers`.
 
 ```js
-exsiedPlugins.about.conf.deveploers.push(
+import { about } from '@exsied/exsied'
+
+about.conf.deveploers.push(
   {
     name: "enassi github",
     repoLink: "https://github.com/enassi/enassi",
@@ -50,6 +52,8 @@ Due to the fact that **exsied** does not have any dependencies, so it cannot hig
 #### Sample code
 
 ```js
+import { sourceCode } from '@exsied/exsied'
+
 import { PluginConf } from '@exsied/exsied/dist/plugins/source_code/base'
 import hljs from 'highlight.js'
 import c from 'highlight.js/lib/languages/c'
@@ -68,7 +72,7 @@ export const highlighCode = (str: string, lang: string) => {
 	return str
 }
 
-const sourceCodeConf = exsiedPlugins.sourceCode.conf as PluginConf
+const sourceCodeConf = sourceCode.conf as PluginConf
 
 sourceCodeConf.renderData = (ele: HTMLElement) => {
 	const lang = ele.getAttribute('lang') || ''
