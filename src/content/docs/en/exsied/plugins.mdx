@@ -8,9 +8,9 @@ description: ""
 If you have customized any functions, you should add your own information to `about.conf.deveploers`.
 
 ```js
-import { about } from '@exsied/exsied'
+import { plugins } from "@exsied/exsied";
 
-about.conf.deveploers.push(
+plugins.about.conf.deveploers.push(
   {
     name: "enassi github",
     repoLink: "https://github.com/enassi/enassi",
@@ -31,9 +31,11 @@ about.conf.deveploers.push(
 If you have the authorization and want disable the **about** plugin:
 
 ```js
+import { exsied, plugins } from "@exsied/exsied";
+
 exsied.init({
   id: "app",
-  plugins: [],
+  plugins: [plugins.bold],
   enableToolbarBubble: true,
   iAbideByExsiedLicenseAndDisableTheAboutPlugin: true, // Add this param
 });
@@ -46,13 +48,13 @@ It will process the `<pre><code>` tags.
 Due to the fact that **exsied** does not have any dependencies, so it cannot highlight or edit code, developers should overwrite the functions in `sourceCode.conf`:
 
 - renderData: Used to highlight code, **highlight.js** is recommended
-- editData: Used to edit code, **codemirror** is recommended. After editing, use **const ele = document.querySelector(`[${DATA_ATTR.sign}="${sign}"]`)** to find the original **code** element, and update it.
+- editData: Used to edit code, **codemirror** is recommended. After editing, use **const ele = document.querySelector(`[${dataAttr.sign}="${sign}"]`)** to find the original **code** element, and update it.
 - randomChars: Used to generate random chars.
 
 #### Sample code
 
 ```js
-import { sourceCode } from '@exsied/exsied'
+import { plugins } from '@exsied/exsied'
 
 import { PluginConf } from '@exsied/exsied/dist/plugins/source_code/base'
 import hljs from 'highlight.js'
@@ -65,14 +67,10 @@ hljs.registerLanguage('c', c)
 hljs.registerLanguage('cpp', cpp)
 
 export const highlighCode = (str: string, lang: string) => {
-	if (lang in hljsLangMap) {
-		return hljs.highlight(str, { language: lang }).value
-	}
-
-	return str
+	return hljs.highlight(str, { language: lang }).value
 }
 
-const sourceCodeConf = sourceCode.conf as PluginConf
+const sourceCodeConf = plugins.sourceCode.conf as PluginConf
 
 sourceCodeConf.renderData = (ele: HTMLElement) => {
 	const lang = ele.getAttribute('lang') || ''
