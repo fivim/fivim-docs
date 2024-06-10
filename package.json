@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/check": "^0.6.0",
     "@astrojs/starlight": "^0.22.4",
+    "@exsied/exsied": "0.5.1",
     "astro": "^4.10.0",
     "sharp": "^0.33.4",
     "starlight-links-validator": "^0.8.0",
