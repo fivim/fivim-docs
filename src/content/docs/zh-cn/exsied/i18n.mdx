@@ -3,13 +3,19 @@ title: 国际化
 description: ""
 ---
 
-目前, **exsied** 只支持英语. 开发者可以根据一下步骤定制自己的语言:
+目前，**已存在**仅支持英语(en)、法语(fr)、德语(de)、俄语(ru)、西班牙语(es)、简体中文(zh-Hans)和繁体中文(zh-Hant)。
 
-### 第 1 步: 找到所有单词
+您可以在`exsied.init`中添加`locale`参数以设置默认区域设置，也可以使用以下函数设置新的区域设置。
 
-在IDE中搜索 `t('`
+**注意**：在`exsied.init`之后更改区域设置将需要重新初始化**exsied**,开发者应首先备份内容。
 
-### 第 2 步: 设置字典
+### 添加其他 locale
+
+#### 第 1 步: 找到所有单词
+
+在 IDE 中搜索 `t('`
+
+#### 第 2 步: 设置字典
 
 ```js
 exsied.i18n.setDict("zh-CN", {
@@ -21,7 +27,7 @@ exsied.i18n.setDict("zh-CN", {
 });
 ```
 
-### 第 2 步: 设置 locale
+#### 第 3 步: 设置 locale
 
 ```js
 exsied.i18n.setLocale("zh-CN");
