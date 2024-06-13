@@ -141,189 +141,189 @@ declare module 'astro:content' {
   slug: "en/faq/faq";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "en/FAQ/version2.x.mdx": {
 	id: "en/FAQ/version2.x.mdx";
   slug: "en/faq/version2x";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "en/develop/build.mdx": {
 	id: "en/develop/build.mdx";
   slug: "en/develop/build";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "en/develop/custom-block.mdx": {
 	id: "en/develop/custom-block.mdx";
   slug: "en/develop/custom-block";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "en/develop/encrypt.mdx": {
 	id: "en/develop/encrypt.mdx";
   slug: "en/develop/encrypt";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "en/donate.mdx": {
 	id: "en/donate.mdx";
   slug: "en/donate";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "en/exsied/about.mdx": {
 	id: "en/exsied/about.mdx";
   slug: "en/exsied/about";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "en/exsied/i18n.mdx": {
 	id: "en/exsied/i18n.mdx";
   slug: "en/exsied/i18n";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "en/exsied/plugins.mdx": {
 	id: "en/exsied/plugins.mdx";
   slug: "en/exsied/plugins";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "en/exsied/usage.mdx": {
 	id: "en/exsied/usage.mdx";
   slug: "en/exsied/usage";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "en/getting-started.mdx": {
 	id: "en/getting-started.mdx";
   slug: "en/getting-started";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "en/index.mdx": {
 	id: "en/index.mdx";
   slug: "en";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "en/themes.mdx": {
 	id: "en/themes.mdx";
   slug: "en/themes";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "index.mdx": {
 	id: "index.mdx";
   slug: "index";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "zh-cn/FAQ/faq.mdx": {
 	id: "zh-cn/FAQ/faq.mdx";
   slug: "zh-cn/faq/faq";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "zh-cn/FAQ/version2.x.mdx": {
 	id: "zh-cn/FAQ/version2.x.mdx";
   slug: "zh-cn/faq/version2x";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "zh-cn/develop/build.mdx": {
 	id: "zh-cn/develop/build.mdx";
   slug: "zh-cn/develop/build";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "zh-cn/develop/custom-block.mdx": {
 	id: "zh-cn/develop/custom-block.mdx";
   slug: "zh-cn/develop/custom-block";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "zh-cn/develop/encrypt.mdx": {
 	id: "zh-cn/develop/encrypt.mdx";
   slug: "zh-cn/develop/encrypt";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "zh-cn/donate.mdx": {
 	id: "zh-cn/donate.mdx";
   slug: "zh-cn/donate";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "zh-cn/exsied/about.mdx": {
 	id: "zh-cn/exsied/about.mdx";
   slug: "zh-cn/exsied/about";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "zh-cn/exsied/i18n.mdx": {
 	id: "zh-cn/exsied/i18n.mdx";
   slug: "zh-cn/exsied/i18n";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "zh-cn/exsied/plugins.mdx": {
 	id: "zh-cn/exsied/plugins.mdx";
   slug: "zh-cn/exsied/plugins";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "zh-cn/exsied/usage.mdx": {
 	id: "zh-cn/exsied/usage.mdx";
   slug: "zh-cn/exsied/usage";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "zh-cn/getting-started.mdx": {
 	id: "zh-cn/getting-started.mdx";
   slug: "zh-cn/getting-started";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "zh-cn/index.mdx": {
 	id: "zh-cn/index.mdx";
   slug: "zh-cn";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "zh-cn/themes.mdx": {
 	id: "zh-cn/themes.mdx";
   slug: "zh-cn/themes";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 };
 
@@ -335,5 +335,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = never;
+	export type ContentConfig = typeof import("../src/content/config.js");
 }

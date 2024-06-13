@@ -3,13 +3,23 @@ title: I18N
 description: ""
 ---
 
-Currently, **exsied** only supports English. Developers can add support for other locales by following these steps:
+Currently, **exsied** only supports English(en), French(fr), German(de), Russian(ru), Spanish(es), Simplified Chinese(zh-Hans), and Traditional Chinese(zh-Hant).
 
-### Setp1: serach all words
+You can add a `locale` parameter in `exsied.init` to set a default locale, or use the following functions to set a new locale.
+
+**Notice**: Changing the locale after `exsied.init` will require reinitializing **exsied** . Developers should backup the content first.
+
+```js
+exsied.i18n.setLocale("en");
+```
+
+### Add support for other locales
+
+#### Setp1: serach all words
 
 Search `t('` in your IDE.
 
-### Setp2: set a dict
+#### Setp2: set a dict
 
 ```js
 exsied.i18n.setDict("zh-CN", {
@@ -21,7 +31,7 @@ exsied.i18n.setDict("zh-CN", {
 });
 ```
 
-### Setp3: set a locale
+#### Setp3: set a locale
 
 ```js
 exsied.i18n.setLocale("zh-CN");
