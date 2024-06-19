@@ -6,21 +6,21 @@ import { siteAndBase } from "./src/site.config";
 
 const conf = {
   // https://docs.astro.build/en/guides/deploy/github/
-  // site: "https://enassi.github.io",
-  // base: "/enassi-docs",
+  // site: "https://fivim.github.io",
+  // base: "/fivim-docs",
   integrations: [
     starlight({
-      title: "Enassi Docs",
+      title: "Fivim Docs",
       logo: {
         light: "./public/logo.png",
         dark: "./public/logo.png",
         replacesTitle: true,
       },
       editLink: {
-        baseUrl: "https://github.com/enassi/enassi-docs/tree/main/",
+        baseUrl: "https://github.com/fivim/fivim-docs/tree/main/",
       },
       social: {
-        github: "https://github.com/enassi/enassi",
+        github: "https://github.com/fivim/fivim",
       },
       customCss: process.env.NO_GRADIENTS ? [] : ["./src/styles/custom.css"],
       locales: {

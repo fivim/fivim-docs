@@ -1,6 +1,6 @@
-# enassi-docs
+# fivim-docs
 
-Document for [enassi](https://github.com/enassi/enassi).
+Document for [fivim](https://github.com/fivim/fivim).
 
 ## Installion
 
