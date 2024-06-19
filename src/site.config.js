@@ -4,10 +4,10 @@ const conf = {
 };
 
 if (process.env.inCloudflare) {
-  conf.site = "https://enassi.pages.dev";
+  conf.site = "https://fivim.pages.dev";
 } else {
-  conf.site = "https://enassi.github.io";
-  conf.base = "/enassi-docs";
+  conf.site = "https://fivim.github.io";
+  conf.base = "/fivim-docs";
 }
 
 export const siteAndBase = conf;
