@@ -1,0 +1,8 @@
+---
+import { siteAndBase } from "../site.config";
+
+const { src } = Astro.props;
+const imgSrc = siteAndBase.base + src;
+---
+
+<img src={imgSrc} />
