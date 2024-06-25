@@ -1,0 +1,52 @@
+---
+title: Tags and links
+description: ""
+---
+
+import Img from "../../../components/Img.astro";
+
+## Basic concepts
+
+**fivim** Provides **content tags** and **link tags** for easy organization of content.
+
+These two types have different purposes:
+
+- The tag name of the **content tags** is semantic words or phrases, inputed by users, making it easy to filter content by tag name
+- The tag name of the **link tags** is automatically generated and has no semantics. It is only used to display all **link tags** related to the current file when opening the file
+
+Compared to the back-link / two-way links of Obsidian or Siyuan Notes, **link tags** are path independent and easier to use.
+You can even directly copy the icons of **content tags** / **link tags** to the new positions, and **fivim** will automatically organize them.
+
+Due to the fact that the essence of the **xrtm** file of **fivim** is HTML code, the following are code snippets of two types:
+
+```html
+Here is <b>content tag</b>: aaa
+<span class="exsied-icon-content-tag" data-fivim-content-tag-name="aaa"></span>
+
+Here is <b>link tag</b>: 36f3371b3999
+<span
+  class="exsied-icon-link-tag"
+  data-fivim-link-tag-name="8654d152-528e-4d30-aea8-36f3371b3999"
+></span>
+```
+
+## Usage
+
+<p>
+  The first step is to click on the **Content tags** or **Link tags** in the
+  **Insert menu** of the Rich Text Editor. The rich text editor will display
+  corresponding icons internally.
+</p>
+<Img src="/add_tags.png" />
+
+<p>
+  Step 2, after saving the file, you can also see the corresponding data in
+  these two tags on the left sidebar.
+</p>
+
+<p>Click on the **content tags** on the left sidebar</p>
+<Img src="/content_tags_list.png" />
+<Img src="/content_tags_detail_list.png" />
+
+<p>Click on the **link tags** on the left sidebar</p>
+<Img src="/link_tags_list.png" />

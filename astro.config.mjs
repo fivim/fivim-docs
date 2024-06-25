@@ -50,6 +50,13 @@ const conf = {
               },
             },
             {
+              label: "Tags and links",
+              link: "tags",
+              translations: {
+                "zh-CN": "标签和链接",
+              },
+            },
+            {
               label: "Donate",
               link: "donate",
               translations: {

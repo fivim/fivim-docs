@@ -1,0 +1,47 @@
+---
+title: 标签和链接
+description: ""
+---
+
+import Img from "../../../components/Img.astro";
+
+## 基本概念
+
+**fivim** 提供了 **内容标签** 和 **链接标签**, 便于组织内容.
+
+这两种类型的用途不同:
+
+- **内容标签** 的标签名是用户输入的有语义的单词或词组, 便于按标签名过滤内容
+- **链接标签** 的标签名是自动生成的无语义的 uuid, 仅用于在打开文件显示所有和当前文件有关的 **链接标签**
+
+相对于 Obsidian / 思源笔记 等的反链 / 双链, **链接标签** 是和路径无关的, 更容易使用, 甚至可以直接在富文本编辑器内复制 **内容标签** 和 **链接标签** 的图标到新的位置, **fivim** 会自动整理.
+
+由于 **fivim** 的 **xrtm** 文件的本质是 html 代码, 下面是这两种类型的的代码片段:
+
+```html
+Here is <b>content tag</b>: aaa
+<span class="exsied-icon-content-tag" data-fivim-content-tag-name="aaa"></span>
+
+Here is <b>link tag</b>: 36f3371b3999
+<span
+  class="exsied-icon-link-tag"
+  data-fivim-link-tag-name="8654d152-528e-4d30-aea8-36f3371b3999"
+></span>
+```
+
+## 使用方法
+
+<p>
+  第一步,在富文本编辑器中的**插入**菜单点击 **内容标签** 或 **链接标签**.
+  富文本编辑器内部会显示相应的图标
+</p>
+<Img src="/add_tags.png" />
+
+<p>第二步,保存文件后,可以在左侧栏的这两个标签也看到相应的数据</p>
+
+<p>点击左侧的**内容标签**</p>
+<Img src="/content_tags_list.png" />
+<Img src="/content_tags_detail_list.png" />
+
+<p>点击左侧的**链接标签**</p>
+<Img src="/link_tags_list.png" />

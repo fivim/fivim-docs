@@ -220,6 +220,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
+"en/tags.mdx": {
+	id: "en/tags.mdx";
+  slug: "en/tags";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
 "en/themes.mdx": {
 	id: "en/themes.mdx";
   slug: "en/themes";
@@ -314,6 +321,13 @@ declare module 'astro:content' {
 "zh-cn/index.mdx": {
 	id: "zh-cn/index.mdx";
   slug: "zh-cn";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"zh-cn/tags.mdx": {
+	id: "zh-cn/tags.mdx";
+  slug: "zh-cn/tags";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
