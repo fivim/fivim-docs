@@ -2,7 +2,7 @@ import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import starlightLinksValidator from "starlight-links-validator";
 
-import { siteAndBase } from "./src/site.config";
+import { siteConf } from "./src/site.config";
 
 const conf = {
   // https://docs.astro.build/en/guides/deploy/github/
@@ -103,8 +103,8 @@ const conf = {
   ],
 };
 
-if (siteAndBase.base) conf.base = siteAndBase.base;
-if (siteAndBase.site) conf.site = siteAndBase.site;
+if (siteConf.base) conf.base = siteConf.base;
+if (siteConf.site) conf.site = siteConf.site;
 
 process.stdout.write(`site:: ${conf.site || ""}\n`);
 process.stdout.write(`base:: ${conf.base || ""}\n`);

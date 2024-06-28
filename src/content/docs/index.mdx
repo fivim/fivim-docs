@@ -9,9 +9,9 @@ hero:
 ---
 
 import { LinkCard, CardGrid } from "@astrojs/starlight/components";
-import { siteAndBase } from "../../site.config";
+import { siteConf } from "../../site.config";
 
 <CardGrid>
-  <LinkCard title="English documents" href={siteAndBase.base + "/en"} />
-  <LinkCard title="简体中文文档" href={siteAndBase.base + "/zh-cn"} />
+  <LinkCard title="English documents" href={siteConf.prefix + "/en"} />
+  <LinkCard title="简体中文文档" href={siteConf.prefix + "/zh-cn"} />
 </CardGrid>
