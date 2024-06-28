@@ -1,0 +1,10 @@
+---
+import { siteAndBase } from "../site.config";
+
+const { link, className } = Astro.props;
+const href = siteAndBase.base + link;
+---
+
+<a class:list={className} href={href}>
+  <slot />
+</a>
