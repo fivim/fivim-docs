@@ -3,6 +3,27 @@ title: FAQ
 description: ""
 ---
 
+## Why is it recommended to use xrtm files?
+
+The essence of xrtm files is HTML files. We have the following thoughts:
+Although markdown has many advantages, such as simplicity, ease of learning, and readability, it also has some drawbacks:
+
+- Compatibility issues:
+  - Lack of unified standards: Without a unified standard, different implementations may support different extended syntax, and different parsers may have differences in parsing syntax.
+  - Dialect issues:
+    - There are many dialects, such as GitHub Flavored Markdown, GitLab Flavored Markdown, CommonMark, MultiMarkdown, Kramdown, and so on.
+    - Even editors such as Obisidian and Typora will add special syntax.
+- Not supporting complex styles: CSS styles are not supported, and for documents that require complex style control, markdown may not be sufficient.
+- Learning curve: For users who are completely unfamiliar with markdown, there is a certain level of difficulty.
+
+Compared to markdown, HTML is better in all aspects except for its more complex source code.
+Especially HTML has a unified standard, there is no dialect issue, and any browser can render it normally.
+
+We hope to use a standardized, plain text data format to store documents, maintaining data transparency and high usability.
+We compared different formats such as markdown/JSON/TOML/HTML, and ultimately decided to use HTML.
+
+Using the Fivim editor, quick input can be achieved using shortcut keys similar to Markdown.
+
 ## Can I not set a password?
 
 No, the password set in the **setup wizard** has two purposes:
