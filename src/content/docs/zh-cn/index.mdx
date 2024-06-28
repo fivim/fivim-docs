@@ -9,7 +9,7 @@ hero:
 ---
 
 import { LinkCard, CardGrid } from "@astrojs/starlight/components";
-import { siteAndBase } from "../../../site.config";
+import { siteConf } from "../../../site.config";
 
 ## 特点
 
@@ -32,17 +32,17 @@ import { siteAndBase } from "../../../site.config";
 <CardGrid>
   <LinkCard
     title="快速开始"
-    href={siteAndBase.base + "/zh-cn/getting-started"}
+    href={siteConf.prefix + "/zh-cn/getting-started"}
   />
   <LinkCard
     title="标签 / 链接 / 星云"
-    href={siteAndBase.base + "/zh-cn/tags"}
+    href={siteConf.prefix + "/zh-cn/tags"}
   />
-  <LinkCard title="主题" href={siteAndBase.base + "/zh-cn/themes"} />
-  <LinkCard title="常见问题" href={siteAndBase.base + "/zh-cn/faq/faq"} />
-  <LinkCard title="开发" href={siteAndBase.base + "/zh-cn/develop/build"} />
+  <LinkCard title="主题" href={siteConf.prefix + "/zh-cn/themes"} />
+  <LinkCard title="常见问题" href={siteConf.prefix + "/zh-cn/faq/faq"} />
+  <LinkCard title="开发" href={siteConf.prefix + "/zh-cn/develop/build"} />
   <LinkCard
     title="Exsied(编辑器)"
-    href={siteAndBase.base + "/zh-cn/exsied/about"}
+    href={siteConf.prefix + "/zh-cn/exsied/about"}
   />
 </CardGrid>

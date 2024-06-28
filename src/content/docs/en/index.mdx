@@ -9,7 +9,7 @@ hero:
 ---
 
 import { LinkCard, CardGrid } from "@astrojs/starlight/components";
-import { siteAndBase } from "../../../site.config";
+import { siteConf } from "../../../site.config";
 
 ## Features
 
@@ -33,14 +33,14 @@ import { siteAndBase } from "../../../site.config";
 <CardGrid>
   <LinkCard
     title="Getting started"
-    href={siteAndBase.base + "/en/getting-started"}
+    href={siteConf.prefix + "/en/getting-started"}
   />
-  <LinkCard title="Tags / Links / Nebula" href={siteAndBase.base + "/en/tags"} />
-  <LinkCard title="Themes" href={siteAndBase.base + "/en/themes"} />
-  <LinkCard title="FAQ" href={siteAndBase.base + "/en/faq/faq"} />
-  <LinkCard title="Develop" href={siteAndBase.base + "/en/develop/build"} />
+  <LinkCard title="Tags / Links / Nebula" href={siteConf.prefix + "/en/tags"} />
+  <LinkCard title="Themes" href={siteConf.prefix + "/en/themes"} />
+  <LinkCard title="FAQ" href={siteConf.prefix + "/en/faq/faq"} />
+  <LinkCard title="Develop" href={siteConf.prefix + "/en/develop/build"} />
   <LinkCard
     title="Exsied(editor)"
-    href={siteAndBase.base + "/en/exsied/about"}
+    href={siteConf.prefix + "/en/exsied/about"}
   />
 </CardGrid>

@@ -1,8 +1,8 @@
 ---
-import { siteAndBase } from "../site.config";
+import { siteConf } from "../site.config";
 
 const { link, className } = Astro.props;
-const href = siteAndBase.base + link;
+const href = siteConf.prefix + link;
 ---
 
 <a class:list={className} href={href}>
